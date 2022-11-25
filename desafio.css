@@ -1,0 +1,94 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url("./img/matrix.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 100px;
+
+  animation: focus-in-contract 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.container-passando {
+  height: 40px;
+  background-color: #fff;
+}
+.teste-passando {
+  font-size: 40px;
+}
+
+.container-images {
+  display: flex;
+  flex-direction: row nowrap;
+  z-index: 999;
+}
+.img-tri {
+  position: relative;
+  bottom: 0px;
+}
+
+.container-background {
+  position: absolute;
+  z-index: 1;
+
+  background-image: url("./img/matrix.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  animation: contraste 8s infinite;
+}
+
+.img-logo {
+  width: 100px;
+}
+
+@keyframes contraste {
+  0% {
+    filter: contrast(200%);
+  }
+  50% {
+    filter: contrast(100%);
+  }
+  100% {
+    filter: contrast(200%);
+  }
+}
+
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes lancamento {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -4,91 +4,56 @@
 }
 
 body {
-  background-image: url("./img/matrix.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100vw;
   height: 100vh;
+
   background-color: black;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  animation: trocar 20s ease-in;
 }
 
-h1 {
-  text-align: center;
-  color: #fff;
-  font-size: 100px;
-
-  animation: focus-in-contract 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-.container-passando {
-  height: 40px;
-  background-color: #fff;
-}
-.teste-passando {
-  font-size: 40px;
-}
-
-.container-images {
-  display: flex;
-  flex-direction: row nowrap;
-  z-index: 999;
-}
-.img-tri {
-  position: relative;
-  bottom: 0px;
-}
-
-.container-background {
-  position: absolute;
-  z-index: 1;
-
-  background-image: url("./img/matrix.jpg");
+.container-logo {
+  background-image: url("./img/logo.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 
-  animation: contraste 8s infinite;
+  animation: text-focus-in 5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+
+  width: 400px;
+  height: 200px;
+  z-index: 999;
 }
 
-.img-logo {
-  width: 100px;
-}
-
-@keyframes contraste {
+@keyframes trocar {
   0% {
-    filter: contrast(200%);
+    background-image: url("./img/neo-the-matrix-resurrections-4k_1644787173.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   50% {
-    filter: contrast(100%);
+    background-image: url("./img/morpheus-the-matrix-resurrections-4k_1644787173.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   100% {
-    filter: contrast(200%);
+    background-image: url("./img/trinity-the-matrix-resurrections-4k_1644787173.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
-@keyframes focus-in-contract {
+@keyframes text-focus-in {
   0% {
-    letter-spacing: 1em;
     filter: blur(12px);
     opacity: 0;
   }
   100% {
     filter: blur(0px);
     opacity: 1;
-  }
-}
-
-@keyframes lancamento {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(100%);
   }
 }

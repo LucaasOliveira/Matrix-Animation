@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Matrix";
+  src: url("fonts/Miltown.ttf"), url("fonts/MLTWNII.ttf");
+  font-weight: normal;
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -15,6 +20,22 @@ body {
   align-items: flex-start;
 
   animation: trocar 20s ease-in;
+}
+
+p {
+  font-family: "Matrix";
+  font-weight: normal;
+  font-size: 1cm;
+}
+
+.premiere-data {
+  margin-top: 10px;
+  text-align: center;
+  color: rgb(138, 185, 138);
+  animation: text-focus-in 5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  width: 400px;
+  height: 200px;
+  z-index: 999;
 }
 
 .container-logo {
